@@ -243,27 +243,33 @@ $friends = $user->any_friends();
 
 <a name="has-relationship-with" />
 #### Has Relationship With
+
 ```php
 $user->hasRelationshipWith($person, $status);
 ```
+
 `$user` must be instance of `User`  
 `$person` must be instance of `User`, `User` array or integer (User id)  
 `$status` must be array of integers (`Status`)  
 
 <a name="get-relationship-with" />
 #### Get Relationship With
+
 ```php
 $user->getRelationshipWith($person, $status);
 ```
+
 `$user` must be instance of `User`  
 `$person` must be instance of `User`, `User` array or integer (User id)  
 `$status` must be array of integers (`Status`)  
 
 <a name="has-pending-request-from" />
 #### Has Pending Request From
+
 ```php
 $user->hasPendingRequestFrom($person);
 ```
+
 `$user` must be instance of `User`  
 `$person` must be instance of `User`, `User` array or integer (User id)  
 

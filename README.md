@@ -108,25 +108,31 @@ Find `friends.php` in your config folder. Make sure you published the package be
 
 <a name="send-friend-request" />
 #### Send Friend Request
+
 ```php
 $user->sendFriendRequestTo($recipient);
 ```
+
 `$user` must be instance of `User`  
 `$recipient` must be instance of `User`, `User` array or integer (User id)  
 
 <a name="accept-friend-request" />
 #### Accept Friend Request
+
 ```php
 $user->acceptFriendRequestFrom($sender);
 ```
+
 `$user` must be instance of `User`  
 `$sender` must be instance of `User`, `User` array or integer (User id)  
 
 <a name="deny-friend-request" />
 #### Deny Friend Request
+
 ```php
 $user->denyFriendRequestFrom($sender);
 ```
+
 `$user` must be instance of `User`  
 `$sender` must be instance of `User`, `User` array or integer (User id)  
 
@@ -135,9 +141,11 @@ $user->denyFriendRequestFrom($sender);
 
 <a name="delete-friend" />
 #### Delete Friend
+
 ```php
 $user->deleteFriend($douchebag);
 ```
+
 `$user` must be instance of `User`  
 `$douchebag` must be instance of `User`, `User` array or integer (User id)  
 
@@ -149,9 +157,11 @@ $user->deleteFriend($douchebag);
 ```php
 $friends = $user->friends();
 ```
+
 `$user` must be instance of `User`
 
 `$friends`: 
+
 ```json
 [{
 	"id": 3,
@@ -177,6 +187,7 @@ $friends = $user->friends();
 ```php
 $friends = $user->incoming_friends();
 ```
+
 `$user` must be instance of `User`
 
 `$friends`: 
@@ -206,9 +217,11 @@ $friends = $user->incoming_friends();
 ```php
 $friends = $user->any_friends();
 ```
+
 `$user` must be instance of `User`
 
 `$friends`: 
+
 ```json
 [{
 	"id": 3,
@@ -243,27 +256,33 @@ $friends = $user->any_friends();
 
 <a name="has-relationship-with" />
 #### Has Relationship With
+
 ```php
 $user->hasRelationshipWith($person, $status);
 ```
+
 `$user` must be instance of `User`  
 `$person` must be instance of `User`, `User` array or integer (User id)  
 `$status` must be array of integers (`Status`)  
 
 <a name="get-relationship-with" />
 #### Get Relationship With
+
 ```php
 $user->getRelationshipWith($person, $status);
 ```
+
 `$user` must be instance of `User`  
 `$person` must be instance of `User`, `User` array or integer (User id)  
 `$status` must be array of integers (`Status`)  
 
 <a name="has-pending-request-from" />
 #### Has Pending Request From
+
 ```php
 $user->hasPendingRequestFrom($person);
 ```
+
 `$user` must be instance of `User`  
 `$person` must be instance of `User`, `User` array or integer (User id)  
 
@@ -277,6 +296,7 @@ $users = \App\User::whereIn('id', [2,3,4])
 ```
 
 `$users`: 
+
 ```json
 [{
 	"id": 2,
